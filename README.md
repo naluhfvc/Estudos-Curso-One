@@ -1,2 +1,2 @@
 # Estudos-One
-Repositório para os estudos feito pelo curso da One + Alura.
+Repositório para os exercícios e desafios propostos pelo curso da One + Alura.
