@@ -6,38 +6,35 @@
 
         document.write("<br>");
         document.write("<br>");
-    }
+}
 
     function mostra(frase) {
 
         document.write(frase);
         pulaLinha();
-    }
+}
 
-    function sorteia(n) {
+var numeroPensado = Math.round(Math.random() * 100);
 
-        return Math.round(Math.random() * n);
-    }
+var tentativas = 1;
 
-    var numeroPensado = sorteia(10);
+while(tentativas <= 3) {
 
+    var chute = parseInt(prompt("Digite seu chute!"));
 
-    var chute = parseInt(prompt("Já pensei. Qual você acha que é?"));
+    if(chute == numeroPensado) {
 
-    if (chute == numeroPensado) {
+        mostra("Você ACERTOU, o número pensado era " + numeroPensado);
+        break;
 
-        mostra("Uau! Você acertou, pois eu pensei no " + numeroPensado);
     } else {
 
-        if (chute > numeroPensado) {
-
-            mostra("Você errou! Seu chute é maior que o número pensado!");
-
-        } else {
-
-            mostra("Você errou! Seu chute é menor que o número pensado!");
-        }
-
+        mostra("Você ERROU!");
     }
+
+    tentativas++;
+}
+
+mostra("FIM");
 
 </script>
