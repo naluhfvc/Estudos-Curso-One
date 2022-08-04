@@ -6,7 +6,7 @@
     var pincel = tela.getContext("2d");
 
     pincel.fillStyle = "pink"; //define estilo
-    pincel.fillRect(0,0,600,400); //definir eixo x,y e tamanho da largura e altura
+    pincel.fillRect(0,0,600,400); //definir eixo x,y e tamanho da largura e altura do retangulo
 
     pincel.fillStyle = "blue";
     pincel.fillRect(0,0,200,400);
@@ -15,15 +15,15 @@
     pincel.fillRect (400,0,200,400);
 
     pincel.fillStyle = "yellow";
-    pincel.beginPath();
-    pincel.moveTo(300,200);
-    pincel.lineTo(200,400);
+    pincel.beginPath();// inicia ou reinicia o caminho do desenho
+    pincel.moveTo(300,200); //move o desenho
+    pincel.lineTo(200,400); // cria uma linha horizontal
     pincel.lineTo(400, 400);
-    pincel.fill();
+    pincel.fill(); //preenche o desenho
 
     pincel.fillStyle = "green";
     pincel.beginPath();
-    pincel.arc(300,200,50,0, 2 * 3.14);
+    pincel.arc(300,200,50,0, 2 * 3.14);//traça a esfera
     pincel.fill();
 
 </script>
