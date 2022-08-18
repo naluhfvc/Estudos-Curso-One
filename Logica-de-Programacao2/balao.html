@@ -2,7 +2,7 @@
 
 <script>
     // ao pressionar SHIFT a bolinha fica grande e ao clicar com botao direito do mouse muda a cor
-    
+
     var tela = document.querySelector('canvas');
     var pincel = tela.getContext('2d');
     var cores = ["red", "purple", "black", "blue"];
@@ -15,15 +15,13 @@
 
         var x = evento.pageX - tela.offsetLeft;
         var y = evento.pageY - tela.offsetTop;
-
         var raio = 10;
 
         console.log(x + ',' + y);
 
-        if (evento.shiftKey) {
-
+        if (evento.shiftKey) 
             raio = raio + 20; // raio agora passa a valer 30!
-        }
+        
 
         pincel.fillStyle = cores[indiceCorAtual];
         pincel.beginPath();
@@ -37,10 +35,9 @@
     function mudaCor() {
 
         indiceCorAtual++;
-        if(indiceCorAtual>=cores.length){
+        if(indiceCorAtual>=cores.length)
             indiceCorAtual = 0;
-        }
-
+        
     }
 
     tela.oncontextmenu = mudaCor; 
